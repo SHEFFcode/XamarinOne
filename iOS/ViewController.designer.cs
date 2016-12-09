@@ -15,13 +15,32 @@ namespace CashConverter.iOS
     partial class ViewController
     {
         [Outlet]
-        UIKit.UIButton Button { get; set; }
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UITextField amountTextField { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIButton convertButton { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UILabel resultLabel { get; set; }
 
         void ReleaseDesignerOutlets ()
         {
-            if (Button != null) {
-                Button.Dispose ();
-                Button = null;
+            if (amountTextField != null) {
+                amountTextField.Dispose ();
+                amountTextField = null;
+            }
+
+            if (convertButton != null) {
+                convertButton.Dispose ();
+                convertButton = null;
+            }
+
+            if (resultLabel != null) {
+                resultLabel.Dispose ();
+                resultLabel = null;
             }
         }
     }

@@ -16,60 +16,15 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" customColorSpace="calibratedWhite" colorSpace="calibratedRGB" red="0.49803921568627452" green="0" blue="0.49803921568627452" alpha="1"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="5" translatesAutoresizingMaskIntoConstraints="NO" userInteractionEnabled="NO" semanticContentAttribute="spatial" misplaced="YES">
-                                <rect key="frame" x="225" y="285" width="150" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <state key="normal" title="Convert">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
-                                </state>
-                                <constraints/>
-                            </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="25" translatesAutoresizingMaskIntoConstraints="NO" textAlignment="center" misplaced="YES" placeholder="Enter Amount of Dollars">
-                                <rect key="frame" x="252" y="247" width="97" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <rect key="contentStretch" x="0" y="0.0" width="1" height="1"/>
-                                <constraints>
-                                    <constraint id="37" firstItem="25" firstAttribute="width" constant="150"/>
-                                </constraints>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="26" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
-                                <rect key="frame" x="279" y="323" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                                <constraints>
-                                    <constraint id="38" firstItem="26" firstAttribute="width" constant="150"/>
-                                </constraints>
-                            </label>
-                        </subviews>
-                        <constraints>
-                            <constraint id="23" firstItem="5" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX"/>
-                            <constraint id="24" firstItem="5" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY"/>
-                            <constraint id="27" firstItem="26" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX"/>
-                            <constraint id="28" firstItem="26" firstAttribute="centerX" secondItem="5" secondAttribute="centerX"/>
-                            <constraint id="29" firstItem="25" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX"/>
-                            <constraint id="30" firstItem="5" firstAttribute="top" secondItem="25" secondAttribute="centerY" constant="23"/>
-                            <constraint id="31" firstItem="25" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX"/>
-                            <constraint id="32" firstItem="26" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX"/>
-                            <constraint id="33" firstItem="25" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX"/>
-                            <constraint id="34" firstItem="5" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY"/>
-                            <constraint id="35" firstItem="5" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX"/>
-                            <constraint id="36" firstItem="26" firstAttribute="centerY" secondItem="5" secondAttribute="bottom" constant="18"/>
-                        </constraints>
+                        <subviews/>
+                        <color key="tintColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
+                        <color key="backgroundColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
                     </view>
-                    <connections>
-                        <outlet property="resultLabel" destination="26" id="name-outlet-26"/>
-                        <outlet property="amountTextField" destination="25" id="name-outlet-25"/>
-                    </connections>
+                    <connections/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
-    <color key="tintColor" colorSpace="calibratedRGB" red="0.73333333333333328" green="0.47450980392156861" blue="0.996078431372549" alpha="1"/>
 </document>

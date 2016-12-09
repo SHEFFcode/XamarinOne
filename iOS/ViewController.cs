@@ -6,7 +6,6 @@ namespace CashConverter.iOS
 {
     public partial class ViewController : UIViewController
     {
-        int count = 1;
 
         public ViewController(IntPtr handle) : base(handle)
         {
@@ -17,11 +16,28 @@ namespace CashConverter.iOS
             base.ViewDidLoad();
 
             // Perform any additional setup after loading the view, typically from a nib.
-            Button.AccessibilityIdentifier = "myButton";
-            Button.TouchUpInside += delegate
+            convertButton.AccessibilityIdentifier = "myButton";
+            convertButton.TouchUpInside += delegate
             {
-                var title = string.Format("{0} clicks!", count++);
-                Button.SetTitle(title, UIControlState.Normal);
+                if (amountTextField.Text.Length < 1)
+                {
+                    return;
+                }
+                else 
+                {
+                    try
+                    {
+                        var result = Convert.ToDouble(amountTextField.Text) * 0.69;
+                        resultLabel.Text = $"$ {amountTextField.Text} = {result.ToString()} GBP";
+                    }
+                    catch (Exception ex)
+                    {
+                        new UIAlertView("error", "please enter a number", null, "ok", null).Show();
+                        amountTextField.Text = "";
+                        Console.WriteLine("Error in conversion." + ex.Message);
+                    }
+
+                }
             };
         }
 
