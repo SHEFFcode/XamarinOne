@@ -25,23 +25,24 @@ namespace CashConverter.Droid
             button.Click += delegate { 
                 if (amountEditText.Text.Length < 1)
                 {
+                    Toast.MakeText(this, "Please enter something to convert", ToastLength.Long).Show();
                     return;
                 } else {
                     if (resultTextView.Text.Length > 0)
                     {
                         resultTextView.Text = "";
                     }
-                    try
+                    var convert = new Currency_Converer(amountEditText.Text);
+                    var result = convert.ConvertCurrency();
+                    if (result is string)
                     {
-                        var result = Convert.ToDouble(amountEditText.Text) * 0.69;
-                        resultTextView.Text = $"USD {amountEditText.Text} is {result} GBP";
+                        Toast.MakeText(this, result, ToastLength.Long).Show();
                     }
-                    catch (System.Exception ex)
+                    else 
                     {
-                        Toast.MakeText(this, "Please enter a number", ToastLength.Long).Show();
-                        amountEditText.Text = "";
-                        Console.WriteLine("Error in conversion " + ex.Message);
+                        resultTextView.Text = result;
                     }
+
                 }
             };
         }

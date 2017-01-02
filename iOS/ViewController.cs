@@ -25,17 +25,9 @@ namespace CashConverter.iOS
                 }
                 else 
                 {
-                    try
-                    {
-                        var result = Convert.ToDouble(amountTextField.Text) * 0.69;
-                        resultLabel.Text = $"$ {amountTextField.Text} = {result.ToString()} GBP";
-                    }
-                    catch (Exception ex)
-                    {
-                        new UIAlertView("error", "please enter a number", null, "ok", null).Show();
-                        amountTextField.Text = "";
-                        Console.WriteLine("Error in conversion." + ex.Message);
-                    }
+                    var convert = new Currency_Converer(amountTextField.Text);
+                    var result = convert.ConvertCurrency();
+                    resultLabel.Text = result;
 
                 }
             };
